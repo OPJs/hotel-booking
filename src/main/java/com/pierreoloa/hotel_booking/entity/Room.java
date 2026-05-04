@@ -31,12 +31,12 @@ public class Room {
     private String description;
 
     @Column(nullable = false)
-    private BigDecimal priceNight;
+    private BigDecimal pricePerNight;
 
 
     private Integer capacity;
     
-    private boolean available = true;
+    private Boolean available = true;
 
     @ManyToOne
     @JoinColumn(name = "hotel_id", nullable = false)
@@ -45,6 +45,8 @@ public class Room {
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List <Booking> bookings;
 
+
+    
 
 
 
