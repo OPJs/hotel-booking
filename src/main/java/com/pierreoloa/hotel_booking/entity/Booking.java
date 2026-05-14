@@ -22,16 +22,16 @@ public class Booking {
         private Long id;
 
         @Column(nullable = false)
-        private LocalDate checkin;
+        private LocalDate checkIn;
         
         
         
         @Column(nullable = false)
-        private LocalDate checkout;
+        private LocalDate checkOut;
 
 
         @Column(nullable = false)
-        private BigDecimal totalprice;
+        private BigDecimal totalPrice;
 
 
         @Enumerated(EnumType.STRING)

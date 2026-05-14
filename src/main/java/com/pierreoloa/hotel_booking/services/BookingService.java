@@ -34,7 +34,7 @@ public class BookingService {
         }
 
 // calcul du nombre de nuits entre les dates de check-in et check-out
-        long night= ChronoUnit.DAYS.between(booking.getCheckin(), booking.getCheckout());
+        long night= ChronoUnit.DAYS.between(booking.getCheckIn(), booking.getCheckOut());
 
 
         BigDecimal TotalPrice =  room.getPricePerNight().multiply(BigDecimal.valueOf(night));
@@ -42,7 +42,7 @@ public class BookingService {
 
         booking.setRoom(room);
         booking.setUser(user);
-        booking.setTotalprice(TotalPrice);
+        booking.setTotalPrice(TotalPrice);
         booking.setStatus(BookingStatus.PENDING);
 
 

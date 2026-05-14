@@ -17,8 +17,6 @@ List<Hotel> findByCity(String city);
 List<Hotel> findByStars(String stars);
 List<Hotel> findByName(String name);
 List<Hotel> findByCityAndStars(String city, String stars);
-List<Hotel> findByRatingGreaterThanEqual(Double rating);
-
 
 
 

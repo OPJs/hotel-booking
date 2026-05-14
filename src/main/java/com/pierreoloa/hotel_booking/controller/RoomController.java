@@ -26,7 +26,7 @@ public class RoomController {
 
         this.roomservice = roomservice;
     }
-    @GetMapping("/hotel/{hotelId}")
+    @GetMapping("/hotel/{hotelid}")
     public ResponseEntity <List<Room>> getRoomByHotel (@PathVariable Long hotelid) {
 
         return ResponseEntity.ok (roomservice.getRoomsByHotel(hotelid));
@@ -39,7 +39,7 @@ public class RoomController {
         return ResponseEntity.ok( roomservice.getRoomById(id));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/available")
     public ResponseEntity <List <Room>>getavailableRooms( @RequestParam Long id, @RequestParam @DateTimeFormat (iso =  DateTimeFormat.ISO.DATE) LocalDate checkIn, @RequestParam @DateTimeFormat (iso =  DateTimeFormat.ISO.DATE) LocalDate checkOut) {
 
         return ResponseEntity.ok(roomservice.getAvailableRooms(id, checkIn, checkOut));

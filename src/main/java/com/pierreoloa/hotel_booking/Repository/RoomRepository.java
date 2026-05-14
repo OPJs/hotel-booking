@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public interface RoomRepository extends JpaRepository <Room, Long>{
     
         List <Room> findByHotelId(Long hotelid);
-        List <Room> findbyAvailable (Boolean available);
+        List <Room> findByAvailable (Boolean available);
         @Query( """
             
             SELECT  r FROM Room r

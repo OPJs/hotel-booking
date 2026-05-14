@@ -23,10 +23,10 @@ public class Hotel{
     private String adress;
 
     @Column(nullable = false)
-    private String City;
+    private String city;
     private String description;
 
-    private String Stars;
+    private String stars;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     private List<Room> rooms;

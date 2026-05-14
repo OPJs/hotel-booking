@@ -31,7 +31,7 @@ public class AuthController {
 
     }
 
-
+    @PostMapping("/login")
     public ResponseEntity <AuthResponse> Login (@RequestBody LoginRequest loginUser) {
 
 
