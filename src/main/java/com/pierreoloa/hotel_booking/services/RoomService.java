@@ -54,7 +54,7 @@ public class RoomService {
         Room room = roomRepository.findById(id).orElseThrow(() -> new RuntimeException("Room not found"));
         room.setRoomNumber(roomDetails.getRoomNumber());
         room.setType(roomDetails.getType());
-        room.setPricePerNight(roomDetails.getPricePerNight());
+        room.setPriceNight(roomDetails.getPriceNight());
         room.setCapacity(roomDetails.getCapacity());
         room.setDescription(roomDetails.getDescription());
         room.setAvailable(roomDetails.getAvailable());

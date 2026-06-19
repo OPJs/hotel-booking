@@ -37,8 +37,7 @@ public class BookingService {
         long night= ChronoUnit.DAYS.between(booking.getCheckIn(), booking.getCheckOut());
 
 
-        BigDecimal TotalPrice =  room.getPricePerNight().multiply(BigDecimal.valueOf(night));
-
+        BigDecimal TotalPrice = room.getPriceNight().multiply(BigDecimal.valueOf(night));
 
         booking.setRoom(room);
         booking.setUser(user);

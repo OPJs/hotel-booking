@@ -31,7 +31,7 @@ public class Room {
     private String description;
 
     @Column(nullable = false)
-    private BigDecimal pricePerNight;
+    private BigDecimal priceNight;
 
 
     private Integer capacity;
