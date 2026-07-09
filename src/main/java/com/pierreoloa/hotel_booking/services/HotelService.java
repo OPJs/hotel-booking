@@ -31,9 +31,9 @@ public class HotelService {
     }
 
 
-    public List<Hotel> getHotelsByRating(Double rating) {
+    /*public List<Hotel> getHotelsByRating(Double rating) {
         return hotelRepository.findByRatingGreaterThanEqual(rating);
-    }
+    }*/
 
     public List<Hotel> getHotelsByStars(String stars) {
         return hotelRepository.findByStars(stars);
